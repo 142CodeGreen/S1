@@ -6,8 +6,8 @@ This is a practise of a simple RAG chatbot that allows upload of PDF file then c
 
 1. Clone the repository:
 ```
-git clone https://github.com/142CodeGreen/RAG-with-NeMo-Guardrails.git
-cd RAG-with-NeMo-Guardrails
+git clone https://github.com/142CodeGreen/S1.git
+cd S1
 ```
 
 2. Install the required packages:
@@ -20,8 +20,6 @@ pip install --upgrade -r requirements.txt
 export NVIDIA_API_KEY="your-api-key-here"
 echo $NVIDIA_API_KEY
 
-export OPENAI_API_KEY="your-openai-key-here"
-echo $OPENAI_API_KEY
 ```
 
 4. Run the app.py:
