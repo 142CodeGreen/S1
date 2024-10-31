@@ -56,10 +56,8 @@ def chat(message,history):
     if query_engine is None:
         return history + [("Please upload a file first.",None)]
     try:
-        #modification for nemo guardrails ( next three rows)
-        user_message = {"role":"user","content":message}
-        response = rails.generate(messages=[user_message])
-        return history + [(message,response['content'])]
+        response = query_engine.query(message)
+        return history + [(message,response)]
     except Exception as e:
         return history + [(message,f"Error processing query: {str(e)}")]
 
@@ -73,7 +71,7 @@ def stream_response(message,history):
         response = query_engine.query(message)
         return history + [(message, response)]
     except Exception as e:
-        yield history + [(message, f"Error processing query: {str(e)}")]
+        return history + [(message, f"Error processing query: {str(e)}")]
 
 # Create the Gradio interface
 with gr.Blocks() as demo:
