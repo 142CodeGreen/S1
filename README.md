@@ -1,3 +1,15 @@
+---
+title: S1
+emoji: 🐠
+colorFrom: gray
+colorTo: indigo
+sdk: gradio
+sdk_version: 5.4.0
+app_file: app.py
+pinned: false
+short_description: test of GPU accelerated Milvus setup
+---
+
 # S1
 
 This is a practise of a simple RAG chatbot that allows upload of PDF file then conduct Q&A against NVIDIA NIM.  It's orchestrated by LlamaIndex and Milvus Vector Store, using NVIDIA embeddings. 
