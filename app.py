@@ -73,15 +73,15 @@ def load_documents(file_objs):
         return f"Error loading documents: {str(e)}"
 
 # Function to handle chat interactions
-def chat(message,history):
-    global query_engine
-    if query_engine is None:
-        return history + [("Please upload a file first.",None)]
-    try:
-        response = query_engine.query(message)
-        return history + [(message,response)]
-    except Exception as e:
-        return history + [(message,f"Error processing query: {str(e)}")]
+#def chat(message,history):
+#    global query_engine
+#    if query_engine is None:
+#        return history + [("Please upload a file first.",None)]
+#    try:
+#        response = query_engine.query(message)
+#        return history + [(message,response)]
+#    except Exception as e:
+#        return history + [(message,f"Error processing query: {str(e)}")]
 
 # Function to stream responses
 def stream_response(message,history):
