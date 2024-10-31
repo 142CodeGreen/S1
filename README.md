@@ -12,7 +12,7 @@ short_description: test of GPU accelerated Milvus setup
 
 # S1
 
-This is a practise of a simple RAG chatbot that allows upload of PDF file then conduct Q&A against NVIDIA NIM.  It's orchestrated by LlamaIndex and Milvus Vector Store, using NVIDIA embeddings. 
+This is a practise of a simple RAG chatbot that allows upload of PDF file then conduct Q&A using NVIDIA NIM.  It's orchestrated by LlamaIndex and Milvus Vector Store, using NVIDIA embeddings. 
 
 ## Setup
 
