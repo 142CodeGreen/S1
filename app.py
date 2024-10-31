@@ -65,13 +65,17 @@ def chat(message,history):
 def stream_response(message,history):
     global query_engine
     if query_engine is None:
-        return history + [("Please upload a file first.",None)]
+        yield history + [("Please upload a file first.",None)]
+        return
 
     try:
         response = query_engine.query(message)
-        return history + [(message, response)]
+        partial_response = ""
+        for text in response.response_gen:
+            partial_response += text
+            yield history + [(message, partial_response)]
     except Exception as e:
-        return history + [(message, f"Error processing query: {str(e)}")]
+        yield history + [(message, f"Error processing query: {str(e)}")]
 
 # Create the Gradio interface
 with gr.Blocks() as demo:
