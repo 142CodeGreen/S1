@@ -4,11 +4,11 @@ llama-index-llms-nvidia==0.1.4
 llama-index-embeddings-nvidia==0.1.4
 #llama-index-postprocessor-nvidia-rerank
 llama-index-vector-stores-Milvus==0.1.20
-#ipywidgets
+ipywidgets
 gradio
 #nemoguardrails
-#OpenAI
-#langchain
+OpenAI
+langchain
 #langchain-nvidia-ai-endpoints
-#transformers>=4.10
-#torch  # Assuming you're using PyTorch for GPU acceleration
+transformers>=4.10
+torch  # Assuming you're using PyTorch for GPU acceleration
