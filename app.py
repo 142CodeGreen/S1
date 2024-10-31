@@ -101,7 +101,7 @@ def stream_response(message,history):
 
 # Create the Gradio interface
 with gr.Blocks() as demo:
-  gr.Markdown("# RAG Chatbot for PDF Files")
+  gr.Markdown("# RAG Chatbot")
 
   with gr.Row():
       file_input = gr.File(label="Select files to upload", file_count="multiple")
