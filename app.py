@@ -105,7 +105,7 @@ with gr.Blocks() as demo:
 
   with gr.Row():
       file_input = gr.File(label="Select files to upload", file_count="multiple")
-      load_btn = gr.Button("Load PDF Documents only")
+      load_btn = gr.Button("Load Documents")
 
   load_output = gr.Textbox(label="Load Status")
 
