@@ -1,3 +1,4 @@
+import torch
 import os
 import gradio as gr
 
@@ -11,6 +12,13 @@ Settings.embed_model = NVIDIAEmbedding(model="NV-Embed-QA", truncate="END")
 from llama_index.vector_stores.milvus import MilvusVectorStore
 from llama_index.core.node_parser import SentenceSplitter
 Settings.text_splitter = SentenceSplitter(chunk_size=400)
+
+# Ensure GPU usage
+if torch.cuda.is_available():
+    logger.info("GPU is available and will be used.")
+    os.environ['CUDA_VISIBLE_DEVICES'] = '0'  # Assuming you want to use GPU 0
+else:
+    logger.warning("GPU not detected or not configured correctly. Falling back to CPU.")
 
 index = None
 query_engine = None
