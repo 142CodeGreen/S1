@@ -78,7 +78,7 @@ docker ps
 
 5. Run the app.py:
 ```
-python3 -m RAG_with_NeMo_Guardrails.app
+python3 -m S1.app
 ```
 
 - Open the provided URL in your web browser.
