@@ -34,7 +34,7 @@ COPY milvus.yaml /milvus/configs/
 
 # Copy requirements.txt and install Python dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade -r requirements.txt
 
 # Copy app.py
 COPY app.py .
